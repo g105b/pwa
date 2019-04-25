@@ -6,5 +6,6 @@ The simplest PWA to demonstrate how to speed up slow apps and add to homescreen 
 + page1.php has a two second sleep to emulate slow server-side code.
 + page2.php has a one second sleep and dynamic content.
 + The two slow pages are cached to instantly load, and page2 still has dynamic content.
++ App works offline (obviously the dynamic content is not updated until connected to the internet again). 
 
 Have fun!
