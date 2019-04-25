@@ -24,4 +24,17 @@ if ('serviceWorker' in navigator) {
 			installEvent.prompt();
 		});
 	}
+
+	setTimeout(cacheLinks, 2500);
+
+	function cacheLinks() {
+		caches.open("pwa").then(function(cache) {
+			let linksFound = [];
+			document.querySelectorAll("a").forEach(function(a) {
+				linksFound.push(a.href);
+			});
+
+			cache.addAll(linksFound);
+		});
+	}
 }

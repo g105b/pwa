@@ -3,8 +3,6 @@ self.addEventListener("install", function(event) {
 		caches.open("pwa").then(function(cache) {
 			return cache.addAll([
 				"/",
-				"/page1.php",
-				"/page2.php",
 				"/style.css",
 				"/script.js",
 			]);
