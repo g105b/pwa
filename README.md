@@ -11,3 +11,9 @@ The simplest PWA to demonstrate how to speed up slow apps and add to homescreen 
 + As soon as networking comes back online, the clock starts ticking again. 
 
 Have fun!
+
+Thoughts and to dos:
+
++ How can we capture form POSTs when offline, to send them when the network comes back up?
++ What's the best way to prevent certain user actions when offline?
++ How can we disable caching on certain URLs? (Useful for lazy loading quick-changing content).
