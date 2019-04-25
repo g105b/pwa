@@ -12,7 +12,7 @@ self.addEventListener("install", function(event) {
 	);
 });
 
-self.addEventListener('fetch', function(event) {
+self.addEventListener("fetch", function(event) {
 	event.respondWith(
 		caches.open("pwa").then(function(cache) {
 			return cache.match(event.request).then(function(response) {

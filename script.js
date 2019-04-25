@@ -1,3 +1,6 @@
+let installEvent = null;
+let installButton = document.getElementById("install");
+
 if ('serviceWorker' in navigator) {
 	window.addEventListener('load', () => {
 		navigator.serviceWorker.register('/service-worker.js')
@@ -8,4 +11,16 @@ if ('serviceWorker' in navigator) {
 				console.error('Registration failed:', err);
 			});
 	});
+
+	window.addEventListener("beforeinstallprompt", (e) => {
+		console.log("Ready to install...");
+		installEvent = e;
+		document.getElementById("install").style.display = "initial";
+	});
+
+	if(installButton) {
+		installButton.addEventListener("click", function() {
+			installEvent.prompt();
+		});
+	}
 }
