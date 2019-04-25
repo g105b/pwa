@@ -13,6 +13,7 @@ if ('serviceWorker' in navigator) {
 	});
 
 	window.addEventListener("beforeinstallprompt", (e) => {
+		e.preventDefault();
 		console.log("Ready to install...");
 		installEvent = e;
 		document.getElementById("install").style.display = "initial";
