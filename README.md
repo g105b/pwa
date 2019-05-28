@@ -1,19 +1,37 @@
-The simplest PWA to demonstrate how to speed up slow apps and add to homescreen / install to desktop.
+Example of how to turn a PHP website into a Progressive Web App.
+================================================================
 
-+ index.php has the required Manifest in the head section.
-+ An install button is hidden by default on index.php.
-+ The install button is displayed when PWA is ready to install.
-+ page1.php has a two second sleep to emulate slow server-side code.
-+ page2.php has a one second sleep and dynamic content (shows the current time, with seconds).
-+ The two slow pages are cached to load instantly, and page2 still has dynamic content.
-+ App works offline.
-+ Viewing page2 offline shows the last-cached time.
-+ As soon as networking comes back online, the clock starts ticking again. 
+Progressive Web Apps (PWAs) are a set of technologies that allow web developers to bridge the gap between web and native experiences, while still respecting the web technologies that drive the applications.
 
-Have fun!
+A well-architectured server-side-rendered application can easily be converted into a PWA to gain all the benefits, so long as URIs are the primary driver for the application's routing.
 
-Thoughts and to dos:
+Features of the PHP application
+-------------------------------
 
-+ How can we capture form POSTs when offline, to send them when the network comes back up?
-+ What's the best way to prevent certain user actions when offline?
-+ How can we disable caching on certain URLs? (Useful for lazy loading quick-changing content).
+The example application provided here is a realtime interactive London underground dashboard, with the following main features:
+
++ Lazy-loaded list of stations
++ Interactive journey planner
++ Realtime train locations and platform announcements
++ Realtime overview of transport statuses
+
+Great thanks goes out to the Transport for London APIs where this data is taken from.
+
+Features of the PWA
+-------------------
+
+Without a PWA, the above application runs just fine, with the typical request-response delay you would expect of a website. Adding the PWA removes any delay between clicks, allows the page to work offline, and offers an "installable" version of the website to launch from the desktop in its own window. To achieve this, no server-side logic has to be changed.
+
+List of PWA features:
+
++ An "install" banner appears to allow installing the application to the desktop
++ Offline functionality
++ Cache is refreshed automatically (no "please refresh" message required)
++ Dynamic content is shown to be out-of-date when offline
+
+Live example
+------------
+
+Head over to https://pwa.g105b.com for a live example of this code.
+
+To run the code locally, install with Composer, then run `vendor/bin/serve` to start a local server at http://localhost:8080
