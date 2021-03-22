@@ -14,6 +14,12 @@
 <br/><br/>
 <a href="page2.php">Page 2</a>
 <br/><br/>
+
+<div>
+	<p>Before you enable the PWA, check out how slow this website is.</p>
+	<button id="enable">Enable the PWA</button>
+</div>
+
 <button id="install">Install this app</button>
 <script src="/script.js"></script>
 </body>

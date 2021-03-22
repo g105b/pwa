@@ -1,6 +1,6 @@
 This is page 1, and it is ...
 <?php
-sleep(2);
+sleep(1);
 ?>
 SLOW!
 <br><br>

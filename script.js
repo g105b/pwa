@@ -1,15 +1,32 @@
 let installEvent = null;
 let installButton = document.getElementById("install");
+let enableButton = document.getElementById("enable");
 
-if ('serviceWorker' in navigator) {
-	window.addEventListener('load', () => {
-		navigator.serviceWorker.register('/service-worker.js')
-			.then(registration => {
-				console.log('Service Worker is registered', registration);
-			})
-			.catch(err => {
-				console.error('Registration failed:', err);
-			});
+enableButton.addEventListener("click", function() {
+	this.disabled = true;
+	startPwa(true);
+});
+
+if(localStorage["pwa-enabled"]) {
+	startPwa();
+}
+
+function startPwa(firstStart) {
+	localStorage["pwa-enabled"] = true;
+
+	if(firstStart) {
+		location.reload();
+	}
+
+	window.addEventListener("load", () => {
+		navigator.serviceWorker.register("/service-worker.js")
+		.then(registration => {
+			console.log("Service Worker is registered", registration);
+			enableButton.parentNode.remove();
+		})
+		.catch(err => {
+			console.error("Registration failed:", err);
+		});
 	});
 
 	window.addEventListener("beforeinstallprompt", (e) => {
@@ -19,13 +36,7 @@ if ('serviceWorker' in navigator) {
 		document.getElementById("install").style.display = "initial";
 	});
 
-	if(installButton) {
-		installButton.addEventListener("click", function() {
-			installEvent.prompt();
-		});
-	}
-
-	setTimeout(cacheLinks, 2500);
+	setTimeout(cacheLinks, 500);
 
 	function cacheLinks() {
 		caches.open("pwa").then(function(cache) {
@@ -35,6 +46,12 @@ if ('serviceWorker' in navigator) {
 			});
 
 			cache.addAll(linksFound);
+		});
+	}
+
+	if(installButton) {
+		installButton.addEventListener("click", function() {
+			installEvent.prompt();
 		});
 	}
 }
