@@ -21,6 +21,25 @@ input {
 	margin-top: 2%;
 }
 
+.klausurenliste {
+	margin-top: 25px;
+}
+
+.klausurenliste thead {
+	font-size: larger;
+	font-style: bold;
+	font-family: 'Raleway', sans-serif;
+	background-color: #00bbbb;
+	color: white;
+}
+
+.klausurenliste th {
+	padding: 5px;
+}
+
+
+
+
 /* ScrolBar  */
 .scrollbar
 {

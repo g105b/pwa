@@ -35,11 +35,24 @@
 				<button class="add-test">Hinzufügen</button>
 			</div>
 
-		<div>
-	</div>
-	<p>hier werden die Klausuren angezeigt</p>
-</body>
-
+<div>
+	<table class="klausurenliste">
+		<thead>
+			<th>Name</th>
+			<th>Datum</th>
+			<th>Modul</th>
+			<th>Notizen</th>
+			<th>Bearbeitung</th>
+		</thead>
+		<tr>
+			<td>Test</td>
+			<td>18.03.2022</td>
+			<td>T6 Fortgeschrittene Web-Entwicklung</td>
+			<td>-</td>
+			<td>Hier kommen bearbeiten, checkbox & löschen hin</td>
+		</tr>
+	</table>
+</div>
 
 <!-- Sidebar -->
 <nav class="main-menu">
