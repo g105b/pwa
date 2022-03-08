@@ -11,13 +11,18 @@
 </head>
 
 <body>
-	<h1>Klausurenübersicht</h1>
-	<p>Willkommen bei deiner individuellen Klausurenübersicht! Hiermit verpasst du keine Termine mehr und hast deine Klausuren stets im Blick. Viel Spaß bei der Benutzung!</p>
-	<div id="date">
-		<!-- Hier soll das Datum angezeigt werden -->
+	<div class="container">
+		<div class="col-sm-6">
+			<h1>Klausurenübersicht</h1>
+		</div>
+		<p>Willkommen bei deiner individuellen Klausurenübersicht! Hiermit verpasst du keine Termine mehr und hast deine Klausuren stets im Blick. Viel Spaß bei der Benutzung!</p>
+		<div id="date">
+			<!-- Hier soll das Datum angezeigt werden -->
+		</div>
 	</div>
 </body>
 
+<!--Sidebar-->
 <nav class="main-menu">
 <div>
 	<a class="logo" href="http://startific.com">
