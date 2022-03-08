@@ -12,6 +12,10 @@
 
 <body>
 	<h1>Klausurenübersicht</h1>
+	<p>Willkommen bei deiner individuellen Klausurenübersicht! Hiermit verpasst du keine Termine mehr und hast deine Klausuren stets im Blick. Viel Spaß bei der Benutzung!</p>
+	<div id="date">
+		<!-- Hier soll das Datum angezeigt werden -->
+	</div>
 </body>
 
 <nav class="main-menu">
@@ -29,14 +33,14 @@
 	</li>   
    
 	<li>                                 
-		<a href="page1.php">
+		<a href="Listenansicht.php">
 			<i class="fa fa-list"></i>
 			<span class="nav-text">Listenansicht</span>
 		</a>
 	</li>   
 
 	<li>                                 
-		<a href="page2.php">
+		<a href="Kalenderansicht.php">
 			<i class="fa fa-calendar"></i>
 			<span class="nav-text">Kalenderansicht</span>
 		</a>

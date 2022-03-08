@@ -7,13 +7,17 @@ enableButton.addEventListener("click", function() {
 	startPwa(true);
 });
 
-$(document).ready(function () {
+function updatePage() {
+	fetch(window.location.href).then(function(response) {
+		return response.text();
+	}).then(function(html) {
+		let newDocument = (new DOMParser()).parseFromString(html, "text/html");
+		document.querySelector("div").innerHTML = newDocument.querySelector("div").innerHTML;
+	});
+	setTimeout(updatePage, 900);
+}
 
-    $('#sidebarCollapse').on('click', function () {
-        $('#sidebar').toggleClass('active');
-    });
-
-});
+updatePage();
 
 if(localStorage["pwa-enabled"]) {
 	startPwa();
