@@ -7,14 +7,54 @@
 	<link rel="manifest" href="/manifest.json" />
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<link href="/PWA-2022/style.css" rel="stylesheet" />
+	<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
 </head>
 
 <body>
 <h1>Klausurenübersicht</h1>
-	<nav class="menu">
-		<li><a href="page1.php">Listenansicht</a></li>
-		<li><a href="page2.php">Kalenderansicht</a></li>
+<div class="wrapper">
+	<nav id="sidebar">
+		<div class="sidebar-header">
+			<h3>Deine Klausurenübersicht</h3>
+			<strong>DK</strong>
+		</div>
+
+		<ul class="list-unsyteled components">
+			<li class="active">
+				<a href="homeSubmenu">
+					<i class="fas fa-home"></i>
+					Home
+				</a>
+			</li>
+			<li class="active">
+				<a href="page1.php">
+					<i class="fas fa-list"></i>
+					Listenansicht
+				</a>
+			</li>
+			<li class="active">
+				<a href="page2.php">
+					<i class="fas fa-calendar"></i>
+					Kalenderansicht
+				</a>
+			</li>
+		</ul>
 	</nav>
+
+	<div id="content">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+
+                <button type="button" id="sidebarCollapse" class="btn btn-info">
+                    <i class="fas fa-align-left"></i>
+                    <span>Toggle Sidebar</span>
+                </button>
+            </div>
+        </nav>
+    </div>
+</div>
 
 <div>
 	<p>Füge eine neue Klausur hinzu:</p>

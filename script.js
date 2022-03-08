@@ -7,6 +7,14 @@ enableButton.addEventListener("click", function() {
 	startPwa(true);
 });
 
+$(document).ready(function () {
+
+    $('#sidebarCollapse').on('click', function () {
+        $('#sidebar').toggleClass('active');
+    });
+
+});
+
 if(localStorage["pwa-enabled"]) {
 	startPwa();
 }
@@ -55,3 +63,4 @@ function startPwa(firstStart) {
 		});
 	}
 }
+
