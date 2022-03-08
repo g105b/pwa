@@ -5,14 +5,31 @@
 </head>
 
 <h1>Klausurenübersicht als Kalender</h1>
-<div>
-	<p>Füge eine neue Klausur hinzu:</p>
-	<p>Name:</p><input></input>
-	<p>Datum:</p><input type="date"></input>
-	<p>Modul:</p><input></input>
-	<p>Notizen:</p><input></input>
-	<br><button class="add-test">Hinzufügen</button>
-</div>
+<div class="container">
+		<div class="row">
+			<div class="col-sm-8">
+				<label>Name:</label><input></input>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-8">
+				<label>Datum:</label><input type="date"></input>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-8">
+				<label>Modul:</label><input></input>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-8">
+				<label>Notizen:</label><textarea></textarea>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-8">
+				<button class="add-test">Hinzufügen</button>
+			</div>
 
 <div>
 	<p>hier werden die Klausuren angezeigt</p>

@@ -12,22 +12,22 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-8">
-				<p>Name:</p><input></input>
+				<label>Name:</label><input></input>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-sm-8">
-				<p>Datum:</p><input type="date"></input>
+				<label>Datum:</label><input type="date"></input>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-sm-8">
-				<p>Modul:</p><input></input>
+				<label>Modul:</label><input></input>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-sm-8">
-				<p>Notizen:</p><input></input>
+				<label>Notizen:</label><textarea></textarea>
 			</div>
 		</div>
 		<div class="row">
