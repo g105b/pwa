@@ -2,8 +2,8 @@ let installEvent = null;
 let installButton = document.getElementById("install");
 let enableButton = document.getElementById("enable");
 
-enableButton.addEventListener("click", function() {
-	this.disabled = true;
+enableButton.addEventListener("click", function(e) {
+	e.target.disabled = true;
 	startPwa(true);
 });
 
