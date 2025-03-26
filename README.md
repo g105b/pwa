@@ -35,7 +35,7 @@ Many of these steps come with assumptions of web dev knowledge. If you require a
 1. Create a new droplet with your choice of Linux operating system. I currently choose Ubuntu LTS, but my choice will probably change soon once I reassess my requirements. Choose the cheapest droplet available to your region, or choose a nearby region. I use $4/month, European server. Upload your SSH keys (preferred option) or choose a password for root access.
 2. Once it's booted, take note of the IP address. From a terminal, `ssh root@12.345.67.890` (replace with your server's IP).
 3. For a PWA to work, it must be served via HTTPS, which requires a domain name. Point your domain's DNS A record to this IP. 
-4. Assuming a Debian-based operating system is chosen, update it and install PHP and required tools with this command: `apt update && apt full-upgrade -y && apt install -y php8.3-{cli,fpm,xml,zip} nginx git`. Change the version of PHP from 8.3 to whatever the latest release is.
+4. Assuming a Debian-based operating system is chosen, update it and install PHP and required tools with this command: `apt update && apt full-upgrade -y && apt install -y php8.3-{cli,fpm,xml,zip} nginx git certbot python3-certbot-nginx`. Change the version of PHP from 8.3 to whatever the latest release is.
 5. Clone the git repository into the public web folder: `cd /var/www && git clone https://github.com/g105b/pwa`
 6. Set up Nginx to serve this directory using PHP on your domain name: `nano /etc/nginx/sites-available/pwa`
 
