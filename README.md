@@ -26,7 +26,7 @@ The concepts of a PWA shown in this example can be hosted anywhere, but this par
 
 To host locally on your development computer, install PHP and run: `php -S 0.0.0.0:8080`, and then visit http://localhost:8080/ in your web browser. This starts PHP's inbuilt web server.
 
-To host on the internet, you'll need a server connected to the internet. There are companies that offer free PHP hosting, but for $4 USD per month, Digital Ocean is my preferred web host. I have a referral link that gives you $200 for free for anyone that's interested! https://m.do.co/c/1daeec55a6d2 
+To host on the internet, you'll need a server connected to the internet, and a TLS certificate. There are companies that offer free PHP hosting, but for $4 USD per month, Digital Ocean is my preferred web host. I have a referral link that gives you $200 for free for anyone that's interested! https://m.do.co/c/1daeec55a6d2 
 
 Here's a step by step guide on starting a server in Digital Ocean, logging in, setting it up, and installing this example PWA so that it's accessible to the internet.
 
